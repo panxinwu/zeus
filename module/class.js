@@ -57,7 +57,7 @@
 
     function wrapper (superObj, prop, fn) {
       return function () {
-        this.super = superObj[prop];
+        this._super = superObj[prop];
         return fn.apply(this, arguments);
       };
     }
